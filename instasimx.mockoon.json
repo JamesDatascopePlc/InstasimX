@@ -1,0 +1,157 @@
+{
+  "uuid": "41c64ece-330d-4c64-81bb-42f60b438ba7",
+  "lastMigration": 28,
+  "name": "InstasimX",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 3003,
+  "hostname": "",
+  "folders": [],
+  "routes": [
+    {
+      "uuid": "603616ae-9463-44eb-b6cd-56361fd8b4ad",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "GetProductParentCategories",
+      "responses": [
+        {
+          "uuid": "9a3656be-98aa-44b3-a6f0-d394446b1b35",
+          "body": "[\n    {\n        \"categoryId\": 2,\n        \"description\": \"Merchandise\",\n        \"slug\": \"merch\"\n    },\n    {\n        \"categoryId\": 5,\n        \"description\": \"Cards\",\n        \"slug\": \"cards\"\n    }\n]",
+          "latency": 1000,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id"
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "f156988e-f747-4d38-9493-6932e39a578a",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "GetProductChildCategories",
+      "responses": [
+        {
+          "uuid": "d2a5a32d-feb0-4ae7-8315-42a7c4d0bc80",
+          "body": "[\n    {\n        \"categoryId\": 3,\n        \"description\": \"Mugs\",\n        \"slug\": \"mugs\"\n    },\n    {\n        \"categoryId\": 4,\n        \"description\": \"Coasters\",\n        \"slug\": \"coasters\"\n    }\n]",
+          "latency": 1000,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id"
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "acf6e1a5-04df-4800-82b7-7b553eda41df",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "GetProductsInCategory",
+      "responses": [
+        {
+          "uuid": "c6cc3323-6feb-4f1b-8c05-bf53aa60ca2b",
+          "body": "{{#switch (queryParam 'categoryId')}}\n{{#case '2'}}\n[\n    {\n        \"imgPath\": \"InstaSim Duck Mug.webp\",\n        \"category\": {\n            \"categoryId\": 3,\n            \"description\": \"Mugs\",\n            \"slug\": \"mugs\"\n        },\n        \"parentCategory\": {\n            \"categoryId\": 2,\n            \"description\": \"Merchandise\",\n            \"slug\": \"merch\"\n        },\n        \"productId\": 1,\n        \"name\": \"InstaSim Duck Mug\",\n        \"description\": \"Mug with the InstaSim Duck Emote&#13;&#13;\\rMug Size: 11oz\",\n        \"slug\": \"instasim-duck-mug\",\n        \"price\": 6.99,\n        \"quantity\": 1,\n        \"commodityNo\": 6912002191,\n        \"parcel\": true\n    },\n    {\n        \"imgPath\": \"InstaSim Sheep Duck Mug.webp\",\n        \"category\": {\n            \"categoryId\": 3,\n            \"description\": \"Mugs\",\n            \"slug\": \"mugs\"\n        },\n        \"parentCategory\": {\n            \"categoryId\": 2,\n            \"description\": \"Merchandise\",\n            \"slug\": \"merch\"\n        },\n        \"productId\": 2,\n        \"name\": \"InstaSim Sheep Duck Mug\",\n        \"description\": \"Mug with the InstaSim Sheep Duck Emote&#13;&#13;Mug Size: 11oz\",\n        \"slug\": \"instasim-sheep-duck-mug\",\n        \"price\": 6.99,\n        \"quantity\": 1,\n        \"commodityNo\": 6912002191,\n        \"parcel\": true\n    },\n    {\n        \"imgPath\": \"InstaSim Ratchet Duck Mug.webp\",\n        \"category\": {\n            \"categoryId\": 3,\n            \"description\": \"Mugs\",\n            \"slug\": \"mugs\"\n        },\n        \"parentCategory\": {\n            \"categoryId\": 2,\n            \"description\": \"Merchandise\",\n            \"slug\": \"merch\"\n        },\n        \"productId\": 3,\n        \"name\": \"InstaSim Ratchet Duck Mug\",\n        \"description\": \"Mug with the InstaSim Ratchet Duck Emote&#13;&#13;Mug Size: 11oz\",\n        \"slug\": \"instasim-ratchet-duck-mug\",\n        \"price\": 6.99,\n        \"quantity\": 1,\n        \"commodityNo\": 6912002191,\n        \"parcel\": true\n    },\n    {\n        \"imgPath\": \"InstaSim Mug.webp\",\n        \"category\": {\n            \"categoryId\": 3,\n            \"description\": \"Mugs\",\n            \"slug\": \"mugs\"\n        },\n        \"parentCategory\": {\n            \"categoryId\": 2,\n            \"description\": \"Merchandise\",\n            \"slug\": \"merch\"\n        },\n        \"productId\": 4,\n        \"name\": \"InstaSim Mug\",\n        \"description\": \"Mug with the InstaSim Logo&#13;&#13;Mug Size: 11oz\",\n        \"slug\": \"instasim-mug\",\n        \"price\": 6.99,\n        \"quantity\": 1,\n        \"commodityNo\": 6912002191,\n        \"parcel\": true\n    },\n    {\n        \"imgPath\": \"InstaSpeedathon Mug.webp\",\n        \"category\": {\n            \"categoryId\": 3,\n            \"description\": \"Mugs\",\n            \"slug\": \"mugs\"\n        },\n        \"parentCategory\": {\n            \"categoryId\": 2,\n            \"description\": \"Merchandise\",\n            \"slug\": \"merch\"\n        },\n        \"productId\": 5,\n        \"name\": \"InstaSpeedathon Mug\",\n        \"description\": \"Mug with the InstaSpeedathon Logo&#13;&#13;Mug Size: 11oz\",\n        \"slug\": \"instaspeedathon-mug\",\n        \"price\": 6.99,\n        \"quantity\": 1,\n        \"commodityNo\": 6912002191,\n        \"parcel\": true\n    },\n    {\n        \"imgPath\": \"InstaSim Coaster.webp\",\n        \"category\": {\n            \"categoryId\": 4,\n            \"description\": \"Coasters\",\n            \"slug\": \"coasters\"\n        },\n        \"parentCategory\": {\n            \"categoryId\": 2,\n            \"description\": \"Merchandise\",\n            \"slug\": \"merch\"\n        },\n        \"productId\": 6,\n        \"name\": \"InstaSim Coaster\",\n        \"description\": \"Coaster with the InstaSim Logo\",\n        \"slug\": \"instasim-coaster\",\n        \"price\": 2.99,\n        \"quantity\": 1,\n        \"commodityNo\": 4419900000,\n        \"parcel\": true\n    },\n    {\n        \"imgPath\": \"InstaSpeedathon Coaster.webp\",\n        \"category\": {\n            \"categoryId\": 4,\n            \"description\": \"Coasters\",\n            \"slug\": \"coasters\"\n        },\n        \"parentCategory\": {\n            \"categoryId\": 2,\n            \"description\": \"Merchandise\",\n            \"slug\": \"merch\"\n        },\n        \"productId\": 7,\n        \"name\": \"InstaSpeedathon Coaster\",\n        \"description\": \"Coaster with the InstaSpeedathon Logo\",\n        \"slug\": \"instaspeedathon-coaster\",\n        \"price\": 2.99,\n        \"quantity\": 1,\n        \"commodityNo\": 4419900000,\n        \"parcel\": true\n    }\n]  \n{{/case}}\n{{#case '5'}}\n[\n    {\n        \"imgPath\": \"BDAY Duck ENG.webp\",\n        \"category\": {\n            \"categoryId\": 6,\n            \"description\": \"English Birthday\",\n            \"slug\": \"birthday-eng\"\n        },\n        \"parentCategory\": {\n            \"categoryId\": 5,\n            \"description\": \"Cards\",\n            \"slug\": \"cards\"\n        },\n        \"productId\": 8,\n        \"name\": \"InstaSim Duck Birthday Card English\",\n        \"description\": \"Birthday Card with the InstaSim Duck Emote&#13;&#13;Inside Message: With best wishes to you on your birthday&#13;&#13;Size: 6in x 6in\",\n        \"slug\": \"instasim-duck-birthday-eng\",\n        \"price\": 1.49,\n        \"quantity\": 1,\n        \"commodityNo\": 4909000000,\n        \"parcel\": false\n    },\n    {\n        \"imgPath\": \"BDAY Duck CYM.webp\",\n        \"category\": {\n            \"categoryId\": 7,\n            \"description\": \"Welsh Birthday\",\n            \"slug\": \"penblwydd-cym\"\n        },\n        \"parentCategory\": {\n            \"categoryId\": 5,\n            \"description\": \"Cards\",\n            \"slug\": \"cards\"\n        },\n        \"productId\": 9,\n        \"name\": \"InstaSim Duck Birthday Card Welsh\",\n        \"description\": \"Birthday Card with the InstaSim Duck Emote&#13;&#13;Inside Message: Gyda dymuniadau gorau i chi ar eich penblwydd&#13;&#13;Size: 6in x 6in\",\n        \"slug\": \"instasim-duck-penblwydd-cym\",\n        \"price\": 1.49,\n        \"quantity\": 1,\n        \"commodityNo\": 4909000000,\n        \"parcel\": false\n    },\n    {\n        \"imgPath\": \"BDAY SheepDuck ENG.webp\",\n        \"category\": {\n            \"categoryId\": 6,\n            \"description\": \"English Birthday\",\n            \"slug\": \"birthday-eng\"\n        },\n        \"parentCategory\": {\n            \"categoryId\": 5,\n            \"description\": \"Cards\",\n            \"slug\": \"cards\"\n        },\n        \"productId\": 10,\n        \"name\": \"InstaSim Sheep Duck Birthday Card English\",\n        \"description\": \"Birthday Card with the InstaSim Sheep Duck Emote&#13;&#13;Inside Message: With best wishes to you on your birthday&#13;&#13;Size: 6in x 6in\",\n        \"slug\": \"instasim-sheep-duck-birthday-eng\",\n        \"price\": 1.49,\n        \"quantity\": 1,\n        \"commodityNo\": 4909000000,\n        \"parcel\": false\n    },\n    {\n        \"imgPath\": \"BDAY SheepDuck CYM.webp\",\n        \"category\": {\n            \"categoryId\": 7,\n            \"description\": \"Welsh Birthday\",\n            \"slug\": \"penblwydd-cym\"\n        },\n        \"parentCategory\": {\n            \"categoryId\": 5,\n            \"description\": \"Cards\",\n            \"slug\": \"cards\"\n        },\n        \"productId\": 11,\n        \"name\": \"InstaSim Sheep Duck Birthday Card Welsh\",\n        \"description\": \"Birthday Card with the InstaSim Sheep Duck Emote&#13;&#13;Inside Message: Gyda dymuniadau gorau i chi ar eich penblwydd&#13;&#13;Size: 6in x 6in\",\n        \"slug\": \"instasim-sheep-duck-penblwydd-cym\",\n        \"price\": 1.49,\n        \"quantity\": 1,\n        \"commodityNo\": 4909000000,\n        \"parcel\": false\n    },\n    {\n        \"imgPath\": \"BDAY RatchetDuck ENG.webp\",\n        \"category\": {\n            \"categoryId\": 6,\n            \"description\": \"English Birthday\",\n            \"slug\": \"birthday-eng\"\n        },\n        \"parentCategory\": {\n            \"categoryId\": 5,\n            \"description\": \"Cards\",\n            \"slug\": \"cards\"\n        },\n        \"productId\": 12,\n        \"name\": \"InstaSim Ratchet Duck Birthday Card English\",\n        \"description\": \"Birthday Card with the InstaSim Ratchet Duck Emote&#13;&#13;Inside Message: With best wishes to you on your birthday&#13;&#13;Size: 6in x 6in\",\n        \"slug\": \"instasim-ratchet-duck-birthday-eng\",\n        \"price\": 1.49,\n        \"quantity\": 1,\n        \"commodityNo\": 4909000000,\n        \"parcel\": false\n    },\n    {\n        \"imgPath\": \"BDAY RatchetDuck CYM.webp\",\n        \"category\": {\n            \"categoryId\": 7,\n            \"description\": \"Welsh Birthday\",\n            \"slug\": \"penblwydd-cym\"\n        },\n        \"parentCategory\": {\n            \"categoryId\": 5,\n            \"description\": \"Cards\",\n            \"slug\": \"cards\"\n        },\n        \"productId\": 13,\n        \"name\": \"InstaSim Ratchet Duck Birthday Card Welsh\",\n        \"description\": \"Birthday Card with the InstaSim Ratchet Duck Emote&#13;&#13;Inside Message: Gyda dymuniadau gorau i chi ar eich penblwydd&#13;&#13;Size: 6in x 6in\",\n        \"slug\": \"instasim-ratchet-duck-penblwydd-cym\",\n        \"price\": 1.49,\n        \"quantity\": 1,\n        \"commodityNo\": 4909000000,\n        \"parcel\": false\n    }\n]\n{{/case}}\n{{/switch}}\n",
+          "latency": 1000,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id"
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "route",
+      "uuid": "603616ae-9463-44eb-b6cd-56361fd8b4ad"
+    },
+    {
+      "type": "route",
+      "uuid": "f156988e-f747-4d38-9493-6932e39a578a"
+    },
+    {
+      "type": "route",
+      "uuid": "acf6e1a5-04df-4800-82b7-7b553eda41df"
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    },
+    {
+      "key": "Access-Control-Allow-Origin",
+      "value": "*"
+    },
+    {
+      "key": "Access-Control-Allow-Methods",
+      "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+    },
+    {
+      "key": "Access-Control-Allow-Headers",
+      "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": []
+}
